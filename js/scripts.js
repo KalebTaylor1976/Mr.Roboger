@@ -9,11 +9,18 @@ function countUp(input) {
   return countUpArray;
 }
 
-function robogerResponse(countUpArray) {
-  let stringArray = countUpArray.map(function(element) {
+function robogerResponds(countUpArray) {
+  let stringArray = countUpArray.map(function(element){
     return element.toString();
-  })
+  });
   for (let index = 0; index < stringArray.length; index+=1) {
-    
+      if (stringArray[index].includes("3")) {
+        stringArray[index] = " Won't you be my neighbor? ";
+      } else if (stringArray[index].includes("2")) {
+        stringArray[index] = " Boop! ";
+      } else if (stringArray[index].includes("1")) {
+        stringArray[index] = " Beep! ";
+      }
   }
-}
+    return stringArray
+  }
