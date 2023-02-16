@@ -28,11 +28,21 @@ function robogerResponds(countUpArray) {
   //User Interface Logic
   function gatherInput(event) {
     event.preventDefault();
-    const userInput = document.getElementById("numberInput").value
-    let newInput = countUp(userInput)
+    const userInput = document.getElementById("numberInput").value;
+    let newInput = countUp(userInput);
     let robogerResponse = robogerResponds(newInput);
-    document.getElementById("return").innerHTML = robogerResponse.join("<br>");
+    let responseHtml = '';
+    for (let i = 0; i < robogerResponse.length; i++) {
+      let response = robogerResponse[i];
+      if (response.includes('3')) {
+        response = '<span class="neighbor">' + response + '</span>';
+      } else if (response.includes('2')) {
+        response = '<span class="boop">' + response + '</span>';
+      } else if (response.includes('1')) {
+        response = '<span class="beep">' + response + '</span>';
+      }
+      responseHtml += response + '<br>';
+    }
+    document.getElementById('return').innerHTML = responseHtml;
   }
-  
-  document.getElementById("form").addEventListener("submit", gatherInput);
   
