@@ -24,3 +24,15 @@ function robogerResponds(countUpArray) {
   }
     return stringArray
   }
+
+  //User Interface Logic
+  function gatherInput(event) {
+    event.preventDefault();
+    const userInput = document.getElementById("numberInput").value
+    let newInput = countUp(userInput)
+    let robogerResponse = robogerResponds(newInput);
+    document.getElementById("return").innerHTML = robogerResponse.join("<br>");
+  }
+  
+  document.getElementById("form").addEventListener("submit", gatherInput);
+  
