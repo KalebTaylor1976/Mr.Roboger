@@ -10,3 +10,14 @@ h1 {
   text-align: center;
   font-size: 50px;
   }
+
+  img {
+    width: 300px;
+    height: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-color: black;
+    border-width: 7px;
+    border-style: inset;
+  }
