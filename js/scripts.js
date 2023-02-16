@@ -8,3 +8,12 @@ function countUp(input) {
   countUpArray.reverse();
   return countUpArray;
 }
+
+function robogerResponse(countUpArray) {
+  let stringArray = countUpArray.map(function(element) {
+    return element.toString();
+  })
+  for (let index = 0; index < stringArray.length; index+=1) {
+    
+  }
+}
