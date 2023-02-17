@@ -11,16 +11,22 @@
   <br>
   <img src="robotrogers.jpg" alt="roboger">
   <br>
-   <span>
-  <div class="container">
-    <form id="form">
-      <label for="numberInput">Enter A Number:</label>
-      <input id="numberInput" type="number" name="numberInput">
-      <button type="submit" id="btn">Roboger Responds</button>
-    </form>
-   </span>
-    <p id="return" class="return"></p>
+  <span>
+    <div class="container">
+      <form id="form">
+        <label for="numberInput">Enter A Number:</label>
+        <input id="numberInput" type="number" name="numberInput">
+        <button type="submit" id="btn">Roboger Responds</button>
+      </form>
+    </div>
+  </span>
+  <p id="return" class="return"></p>
   </div>
-  </br>
+  <br>
+
+  <script>
+    document.getElementById("form").addEventListener("submit", gatherInput);
+  </script>
+
 </body>
 </html>
