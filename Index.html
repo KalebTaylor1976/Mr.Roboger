@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/scripts.js"></script>
+  <title>Mr. Roboger's Neighborhood</title>
+</head>
+
+<body>
+  <h1>Mr. Roboger's Neighborhood</h1>
+  <br>
+  <img src="robotrogers.jpg" alt="roboger">
+  <br>
+  <span>
+    <div class="container">
+      <form id="form">
+        <label for="numberInput">Enter A Number:</label>
+        <input id="numberInput" type="number" name="numberInput">
+        <button type="submit" id="btn">Roboger Responds</button>
+      </form>
+    </div>
+  </span>
+  <p id="return" class="return"></p>
+  </div>
+  <br>
+
+  <script>
+    document.getElementById("form").addEventListener("submit", gatherInput);
+  </script>
+
+</body>
+</html>
