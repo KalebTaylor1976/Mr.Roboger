@@ -25,3 +25,22 @@ Test: "It should replace the entered number of 3 with the phrase "Won't you be m
 Code: robogerResponds("3");
 Expected Result: Won't you be my neighbor?
 
+Test: "It should return a string printed to the screen equal to the number entered, starting at 0, and substituting only to 1, 2, 3 numbers for "Beep!", "Boop!", and "Won't you be my neighbor?"
+Code: robogerResponds("5")
+Expected Result: 0,BEEP!,BOOP!,Won't you be my neighbor?,4,5
+
+Test: "It should return "Wont you be my neighbor?" if the number contains a 1 before the 3"
+Code: robogerResponds("13");
+Expected Result: Won't you be my neighbor?
+
+Test: "It should return "Boop!" if the number contains a 1 before the 2"
+Code: robogerResponds("12")
+Expected Result: "Boop!"
+
+Test: "It should return "Won't you be my neighbor?" if the number contains a 2 before the 3"
+Code: robogerResponds("23")
+Expected Result: Won't you be my neighbor?
+
+Test: "It should return "Boop!" if the number contains a 2 before the 1"
+Code: robogerResponds("21")
+Expected Result: Boop!
